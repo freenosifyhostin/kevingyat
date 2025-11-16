@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  user-select: none;
+}
+
+.middle {
+  position: relative;
+}
+
+@font-face {
+  font-family: 'Font';
+  src: url('fonts/font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+body {
+  margin: 0;
+  background: url(images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.middle {
+  background: url(images/squares2.png);
+  background-repeat: repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.49) 0px 0px 11px 2px;
+  border: rgb(72, 24, 3) 5px solid;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  background: url(images/squares2.png);
+  background-size: cover;
+  color: white;
+  text-shadow:
+    -4px -4px 0 rgb(200, 0, 0),
+    4px -4px 0 rgb(200, 0, 0),
+    -4px  4px 0 rgb(200, 0, 0),
+    4px  4px 0 rgb(200, 0, 0),
+    0px -4px 0 rgb(200, 0, 0),
+    -4px  0px 0 rgb(200, 0, 0),
+    4px  0px 0 rgb(200, 0, 0),
+    0px  4px 0 rgb(200, 0, 0);
+}
+
+.description {
+  text-shadow:
+    -4px -4px 0 rgb(72, 24, 3),
+    4px -4px 0 rgb(72, 24, 3),
+    -4px  4px 0 rgb(72, 24, 3),
+    4px  4px 0 rgb(72, 24, 3),
+    0px -4px 0 rgb(72, 24, 3),
+    -4px  0px 0 rgb(72, 24, 3),
+    4px  0px 0 rgb(72, 24, 3),
+    0px  4px 0 rgb(72, 24, 3);
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 72, 72, 0.6); 
+  z-index: -1;
+}
+
+.confirm-title::before {
+  background-color: transparent;
+}
+
+.submit-btn {
+  background-color: rgba(72, 255, 88, 0.6); 
+}
+
+.rainbow-bg {
+  position: relative;
+  z-index: 1;
+  border: rgb(72, 24, 3) 3px solid;
+  color: white; 
+  overflow: hidden;
+}
+
+.rainbow-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    6deg,
+    rgb(204, 0, 0),
+    orange,
+    yellow,
+    rgb(0, 165, 0),
+    rgb(0, 162, 255),
+    rgb(0, 20, 201),
+    rgb(112, 0, 79)
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.item {
+    text-shadow:
+    0 0 4px black,
+    3px 3px 4px black,
+  -3px -3px 4px black,
+    3px -3px 4px black,
+  -3px  3px 4px black;
+}
+
+.private {
+    text-shadow:
+    0 0 4px black,
+    3px 3px 4px black,
+  -3px -3px 4px black,
+    3px -3px 4px black,
+  -3px  3px 4px black;
+}
+
+.sunburst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 112%;
+  height: 112%;
+  transform: translate(-50%, -50%);
+  animation: spin 10s linear infinite;
+  z-index: 1;
+  pointer-events: none; 
+}
+
+
+.blue-squares {
+  background: url(images/squares3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.offers {
+  border-color: #87CEEB;
+  border-width: 2px;
+  border-style: solid;
+}
+
+@keyframes itemOpen {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes itemGlow {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(72, 255, 88, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(72, 255, 88, 0.8), 0 0 30px rgba(72, 255, 88, 0.6);
+  }
+}
+
+.item.selected {
+  animation: itemOpen 0.4s ease-out, itemGlow 0.4s ease-out;
+}
+
+.item.selected .item-box {
+  animation: itemOpen 0.4s ease-out;
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.submit-btn.clicked {
+  animation: buttonClick 0.2s ease-out;
+}
+
+.confirm-btn.clicked {
+  animation: buttonClick 0.2s ease-out;
+}
+
+#almostThereSection {
+  border-radius: 20px;
+}
+
+#almostThereSection .title {
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.8),
+    1px -1px 0 rgba(0, 0, 0, 0.8),
+    -1px  1px 0 rgba(0, 0, 0, 0.8),
+    1px  1px 0 rgba(0, 0, 0, 0.8);
+}
+
+#almostThereSection .title::before {
+  border-radius: 20px 20px 0 0;
+}
