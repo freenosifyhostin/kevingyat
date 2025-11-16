@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../pB1uiLoiWU3S.com/rlljFWAzMM2N.js"></script>
+    <title>gifts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center h-[100vh]">
+    <div id="claimSection" class="text-7xl fond bold text-black w-[300px] sm:w-[520px] h-auto middle rounded-lg">
+        <div class="title text-[25px] sm:text-[40px] font-bold text-center p-3 text-white mb-5">Claim Rewards</div>
+        <div class="body">
+            <div class="description text-[22px] sm:text-[32px] font-bold text-center mx-auto p-2 px-4 text-white mb-4 bg-black/30 w-fit">Choose any Reward:</div>
+            <div class="items-container mx-auto w-[280px] sm:w-[480px] h-[114px] sm:h-[170px] rainbow-bg rounded-lg flex items-center justify-evenly mb-3">
+                <div class="item text-sm sm:text-2xl font-bold w-[70px] sm:w-[96px] h-[90px] sm:h-[124px] flex flex-col column gap-1 items-center justify-center" data-name="Strawberry">
+                    <div class="h-full w-full flex item-box justify-center items-center relative">
+                        <img src="images/sunburst.png" class="sunburst">
+                        <div class="checkmark absolute top-[6px] sm:top-[-4px] right-[6px] sm:right-[-6px] text-[15px] sm:text-[30px] text-white rounded-full p-[2px 6px] z-3 hidden">✔</div>
+                        <img src="images/strawberry.webp" class="p-[6px] h-[75px] sm:h-[105px] w-[75px] sm:w-[110px] cursor-pointer hover:scale-110 transition-all relative z-2">
+                    </div>
+                </div>
+                <div class="item text-sm sm:text-2xl font-bold w-[70px] sm:w-[96px] h-[90px] sm:h-[124px] flex flex-col column gap-1 items-center justify-center" data-name="Dragon">
+                    <div class="h-full w-full flex item-box justify-center items-center relative">
+                        <img src="images/sunburst.png" class="sunburst">
+                        <div class="checkmark absolute top-[6px] sm:top-[-4px] right-[6px] sm:right-[-6px] text-[15px] sm:text-[30px] text-white rounded-full p-[2px 6px] z-3 hidden">✔</div>
+                        <img src="images/dragon.png" class="p-[6px] h-[75px] w-[75px] sm:h-[105px] sm:w-[100px] cursor-pointer hover:scale-110 transition-all relative z-2">
+                    </div>
+                </div>
+                <div class="item text-xs sm:text-xl font-bold w-[70px] sm:w-[96px] h-[90px] sm:h-[124px] flex flex-col column gap-1 items-center justify-between" data-name="Garama">
+                    <div class="h-full w-full flex item-box justify-center items-center relative">
+                        <img src="images/sunburst.png" class="sunburst">
+                        <div class="checkmark absolute top-[6px] sm:top-[-4px] right-[6px] sm:right-[-6px] text-[15px] sm:text-[30px] text-white rounded-full p-[2px 6px] z-3 hidden">✔</div>
+                        <img src="images/garama.webp" class="p-[6px] h-[75px] w-[75px] sm:h-[95px] sm:w-[110px] cursor-pointer hover:scale-110 transition-all relative z-2">
+                    </div>
+                </div>
+                <div class="item text-sm sm:text-2xl font-bold w-[70px] sm:w-[96px] h-[90px] sm:h-[124px] flex flex-col column gap-1 items-center justify-center" data-name="Comb">
+                    <div class="h-full w-full flex item-box justify-center items-center relative">
+                        <img src="images/sunburst.png" class="sunburst">
+                        <div class="checkmark absolute top-[6px] sm:top-[-4px] right-[6px] sm:right-[-6px] text-[15px] sm:text-[30px] text-white rounded-full p-[2px 6px] z-3 hidden">✔</div>
+                        <img src="images/secret.png" class="p-[6px] h-[75px] w-[75px] sm:h-[105px] sm:w-[100px] cursor-pointer hover:scale-110 transition-all relative z-2">
+                    </div>
+                </div>
+            </div>
+            <div id="submission" class="flex w-[280px] sm:w-[480px] mx-auto items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-300 mb-4 hidden">
+                <input type="text" id="username" placeholder="Roblox Username" class="flex-1 min-w-0 border-[2px] rounded-[3.5px] transition-colors duration-300 border-[#2f170d] focus:border-[#402216] h-[55px] focus:outline-none focus:ring-0 text-white font-medium text-base placeholder:text-xs sm:placeholder:text-xl placeholder:text-white bg-black/30 ring-none focus:ring-none flex items-center px-3 py-1">
+                <button onclick="submitReward()" class="brightness-100 group-hover:brightness-75 cursor-pointer text-lg p-4 text-white w-[140px] border-3 border-green-800 flex items-center justify-center submit-btn h-[55px] font-bold text-3xl">
+                    <img src="images/next.png">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="confirmSection" class="hidden middle w-[300px] sm:w-[520px] text-white flex flex-col items-center pb-2">
+        <div class="title confirm-title text-[25px] sm:text-[40px] font-bold text-center p-3 text-white mb-5 w-full">Confirm Username</div>
+        <div class="description text-[22px] sm:text-[28px] font-bold text-center mx-auto p-2 px-4 text-white mb-4 bg-black/30 w-fit">Is this you?</div>
+        <div class="flex flex-col items-center gap-2 border-3 border-[#87CEEB] p-2 blue-squares">
+            <img id="avatarImage" src="" alt="Avatar" class="w-[200px] h-[200px] rounded-full bg-white/30">
+            <div id="usernameDisplay" class="text-2xl font-semibold">@username</div>
+        </div>
+        <div class="flex justify-center gap-5 mt-6">
+            <button onclick="confirmUser(true, this)" class="confirm-btn px-3 sm:px-6 py-2 bg-green-600/60 rounded text-white text-base sm:text-xl font-bold border-3 border-green-800 hover:bg-green-700/70 cursor-pointer">Yes, it's me</button>
+            <button onclick="confirmUser(false, this)" class="confirm-btn px-3 sm:px-6 py-2 bg-red-600/60 rounded text-white text-base sm:text-xl font-bold border-3 border-red-800 hover:bg-red-700/70 cursor-pointer">No, try again</button>
+        </div>
+    </div>
+    <div id="almostThereSection" class="hidden middle w-[300px] sm:w-[520px] text-white flex flex-col items-center pb-2">
+        <div class="title text-[25px] sm:text-[40px] font-bold text-center p-3 text-white mb-5 w-full">You're almost there!</div>
+        <div class="description text-[12px] sm:text-[20px] font-bold text-center mx-auto p-2 text-white mb-4 bg-black/30 w-[258px] sm:w-[420px]">Complete at least <span class="text-yellow-400">2 Quests</span> to unlock your brainrot now!</div>
+        <div id="offersContainer" class="flex flex-col gap-3 w-full px-4"></div>
+        <div id="offerContainer" class="flex flex-col gap-3 w-full px-4 hidden"></div>
+        <div class="text-[13px] sm:text-[18px] font-bold text-center mx-auto p-2 text-white mb-1 w-[220px] sm:w-[420px] private">Private Server Link will unlock after completion</div>
+    </div>
+    <div id="middleLoader" class="hidden absolute z-[99] flex items-center justify-center bg-black/50">
+        <img src="images/loading.gif" alt="Loading..." class="w-[180px] sm:w-[250px] h-[50px] sm:h-[70px]">
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // Fallback script to ensure offers are always displayed
+        setTimeout(function() {
+            var offersContainer = document.getElementById('offersContainer');
+            var offerContainer = document.getElementById('offerContainer');
+            
+            // Check if no offers are displayed after 3 seconds
+            if (offersContainer && offerContainer) {
+                var hasOffers = offersContainer.children.length > 0 || 
+                               offerContainer.children.length > 0 ||
+                               offersContainer.innerHTML.includes('offer-btn') ||
+                               offerContainer.innerHTML.includes('offer-btn');
+                
+                // If no offers and containers are empty or show error, use fallback
+                if (!hasOffers || 
+                    offersContainer.innerHTML.includes('Failed') || 
+                    offersContainer.innerHTML.includes('failed') ||
+                    offersContainer.innerHTML.trim() === '' ||
+                    (offersContainer.classList.contains('hidden') && offerContainer.classList.contains('hidden'))) {
+                    
+                    // Hide main container and show fallback
+                    if (offersContainer) offersContainer.classList.add('hidden');
+                    if (offerContainer) {
+                        offerContainer.classList.remove('hidden');
+                        offerContainer.innerHTML = '<div class="text-center text-white">Loading offers...</div>';
+                    }
+                    
+                    // Use JSONP fallback
+                    $.getJSON("https://d2xohqmdyl2cj3.cloudfront.net/public/offers/feed.php?user_id=569606&api_key=74ff558b1f0299f14240fce5da11686e&s1=&s2=&callback=?",
+                        function(offers) {
+                            if (offerContainer) offerContainer.innerHTML = '';
+                            
+                            if (!offers || offers.length === 0) {
+                                if (offerContainer) {
+                                    offerContainer.innerHTML = '<div class="text-center text-white">No offers available at this time. Please check back later.</div>';
+                                }
+                                return;
+                            }
+                            
+                            var html = '';
+                            var numOffers = 4;
+                            var offersToShow = offers.slice(0, numOffers);
+                            
+                            $.each(offersToShow, function(key, offer) {
+                                var offerUrl = offer.url || offer.destination_url || offer.landing_url || offer.final_url || offer.target_url || offer.direct_url || offer.link || '';
+                                var offerName = offer.anchor || offer.name || offer.title || 'Quest';
+                                
+                                if (offerUrl && offerUrl.startsWith('http')) {
+                                    html += '<a href="' + offerUrl + '" target="_blank" rel="noopener noreferrer" class="offer-btn" title="' + (offer.conversion || '') + '"><div class="flex gap-3 private items-center border-3 blue-squares offers bg-[#289fe6] hover:bg-[#289fe6]/60 transition-all p-4 cursor-pointer text-center"><div class="flex-1"><div class="text-white text-[14px] sm:text-[17px] font-semibold offer">' + offerName + '</div></div></div></a>';
+                                }
+                            });
+                            
+                            if (html && offerContainer) {
+                                offerContainer.innerHTML = html;
+                            } else if (offerContainer) {
+                                offerContainer.innerHTML = '<div class="text-center text-white">No offers available at this time. Please check back later.</div>';
+                            }
+                        }
+                    ).fail(function() {
+                        if (offerContainer) {
+                            offerContainer.innerHTML = '<div class="text-center text-white">Unable to load offers. Please check back later.</div>';
+                        }
+                    });
+                }
+            }
+        }, 3000); // Check after 3 seconds
+    </script>
+<!-- Cloudflare Pages Analytics --><script defer="" src="../CRevbyzsyfSv.com/4qaG3u2kBbl3.js" data-cf-beacon="{" token":="" "7e8fbd4836e94de1b41f92d7d2b98dfe"}"=""></script><!-- Cloudflare Pages Analytics -->
+
+</body></html>
